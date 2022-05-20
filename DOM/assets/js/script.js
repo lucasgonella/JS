@@ -1,34 +1,32 @@
-function changeMode() {
-    changeClasses();
-    changeText();
+function mudaCor() {
+    mudaClasse();
+    mudaTexto();
 }
 
-function changeClasses() {
-    button.classList.toggle(darkModeClass);
-    h1.classList.toggle(darkModeClass);
-    body.classList.toggle(darkModeClass);
-    footer.classList.toggle(darkModeClass);
+function mudaClasse() {
+    h1.classList.toggle(DarkMode);
+    button.classList.toggle(DarkMode);
+    footer.classList.toggle(DarkMode);
+    body.classList.toggle(DarkMode);
 }
 
-function changeText(){
-    const lightMode = "Light Mode";
-    const darkMode = "Dark Mode";
-    if (body.classList.contains(darkModeClass)) {
-        button.innerHTML = lightMode;
-        h1.innerHTML = darkMode + " ON";
-        return; 
+function mudaTexto() {
+    if (body.classList.contains(DarkMode)){
+        h1.innerHTML = "Dark Mode ON"
+        button.innerHTML = "Light Mode"
+        footer.innerHTML = "Caralho maluco, fiquei DARK 🐱‍👤"
+    } else {
+        h1.innerHTML = "Light Mode ON"
+        button.innerHTML = "Dark Mode"
+        footer.innerHTML = "Hackeado pelo Light Mode"
+        footer.innerHTML = "Caralho maluco, fiquei LIGHT 🤣"
     }
-
-    button.innerHTML = darkMode;
-    h1.innerHTML = lightMode + " ON";
-    
 }
 
-
-const darkModeClass = 'dark-mode';
-const button = document.getElementById('mode-selector');
 const h1 = document.getElementById('page-title');
-const body = document.getElementsByTagName('body')[0];
+const button = document.getElementById('mode-selector');
 const footer = document.getElementsByTagName('footer')[0];
+const body = document.getElementsByTagName('body')[0];
+const DarkMode = "dark-mode"
 
-button.addEventListener("click", changeMode);
+button.addEventListener('click', mudaCor );
