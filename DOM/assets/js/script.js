@@ -19,7 +19,7 @@ function mudaTexto() {
         h1.innerHTML = "Light Mode ON"
         button.innerHTML = "Dark Mode"
         footer.innerHTML = "Hackeado pelo Light Mode"
-        footer.innerHTML = "Caralho maluco, fiquei LIGHT 🤣"
+        footer.innerHTML = "Caralho maluco, fiquei LIGHT 💡"
     }
 }
 
